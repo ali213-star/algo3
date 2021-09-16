@@ -1,0 +1,27 @@
+PROCEDURE procedure_name(v1,v2:array of integer ; var dot:integer)
+VAR
+   i, dot:integer;
+BEGIN
+    if (v1.lenght<>v2.lenght) then 
+    write("we can not calcuate dotpoduct")
+
+    dot:=0
+END_FOR
+ FOR i FROM 0 TO v1.lenght STEP 1 DO
+dot:=dot + v1[i]*v2[i] 
+END_FOR
+
+
+
+ALGORITHM calculate
+VAR
+    v1,v2;array of integer [50]
+    dot;integer
+BEGIN
+    dot:=0;
+    write('give me a lenght of the vector')
+    read(n)
+    FOR i FROM 0 TO n-1 STEP 1 DO
+        read(v1[i],v2[i])
+    END_FOR
+     dotpoduct(v1,v2)
